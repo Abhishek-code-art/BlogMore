@@ -1,0 +1,13 @@
+<%- include('./partials/header'); %>
+<% foundUsers.forEach(function(user) { %> 
+    <% user.blogs.forEach(function(blog) { %> 
+        <% if(requestedTitle == blog.blogtitle) {%> 
+        <div id="postPage">
+            <h1 style="color: #f2f2f2;"><%= blog.blogtitle %> </h1>
+            <p style="color: #d9d9d9;"><%= blog.blogbody %> </p>
+        </div>
+        <% } %> 
+    <% }); %> 
+<% }); %> 
+
+<%- include('./partials/footer'); %> 

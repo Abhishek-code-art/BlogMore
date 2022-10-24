@@ -1,0 +1,47 @@
+<%- include('./partials/header'); -%>
+
+
+<div class="container">
+      <div class="card">
+        <img src="./images/myimage.jpg" alt="My Image" style="width: 75px; height: 77px; border-radius: 50%;" class="myimage">
+
+        <p style="color: grey; font-size: large;">Register</p>
+
+        <button class="btn btn-primary social-button" onclick="location.href='/auth/google'"><i class="fa-brands fa-google fa-x me-3"></i>Signin using Google</button>
+
+          <!-- Makes POST request to /register route -->
+        <form action="/register" method="POST">
+            <div class="form form-group">
+                <label for="email" class="d-flex justify-content-between">
+                    <span>Full Name</span>
+                </label>
+                <input type="text" class="form-control" name="fullname" required>
+            </div>
+            <div class="form form-group">
+                <label for="email" class="d-flex justify-content-between">
+                        <span>Email</span>
+                </label>
+                <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form form-group">
+                <label for="email" class="d-flex justify-content-between">
+                    <span>Password</span>
+                </label>
+                <input type="password" class="form-control" name="password" required>
+            </div>
+
+            <div class="register-button">
+              <button type="submit" class="btn btn-signup w-100">Create an account</button>
+            </div>
+        </form>
+        <a href="/register" style="color: grey; margin-top: 3px; text-decoration: none;">Already registered?</a>  
+    </div>
+</div>
+
+
+
+
+
+
+
+<%- include("./partials/footer"); -%>

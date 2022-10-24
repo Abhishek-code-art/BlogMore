@@ -1,0 +1,38 @@
+<%- include('./partials/header'); -%>
+
+<div class="container">
+    <div class="card">
+        <img src="./images/myimage.jpg" alt="My Image" style="width: 75px; height: 77px; border-radius: 50%;" class="myimage">
+
+        <div class="d-flex justify-content-center my-2">
+            <h4 style="color: #142F43;">Welcome To BlogMore!</h4>
+        </div>
+        <button class="btn btn-primary mt-2 social-button" onclick="location.href='/auth/google'"><i class="fa-brands fa-google fa-x me-3"></i>Signin using Google</button>
+
+        <form action="/login" method="post">
+            <div class="form form-group">
+                <label for="email" class="d-flex justify-content-between">
+                    <span>Email Address</span>
+                </label>
+                <input type="email" class="form-control" placeholder="Email address" name="username">
+            </div>
+            
+            <div class="form form-group">
+                <label class="d-flex justify-content-between" for="password">
+                    <span>Password</span>
+                </label>
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+            </div>
+            
+            <div class="login-button">
+                <button class="btn btn-signin w-100" type="submit">Sign In</button>
+            </div>
+        </form>
+ 
+        <a href="/register" style="color: grey; margin-top: 10px; text-decoration: none;">Sign Up</a>        
+    </div>
+</div>
+
+
+
+<%- include("./partials/footer"); -%>
