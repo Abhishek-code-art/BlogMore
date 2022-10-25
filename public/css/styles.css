@@ -139,6 +139,10 @@ h3 {
             padding-left: 4.5rem;
             padding-right: 4.5rem;
         }
+
+        #about-content #mybio p{
+            text-align:center !important;
+        }
     
         #image-container img {
             width: 280px;
@@ -351,6 +355,10 @@ h3 {
     #about-content p{
         padding-left: 4.5rem;
         padding-right: 4.5rem;
+    }
+
+    #about-content #mybio p{
+        text-align: start !important;
     }
 
     #image-container img {
