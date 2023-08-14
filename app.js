@@ -76,7 +76,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://fierce-retreat-02578.herokuapp.com/auth/google/home"
+    callbackURL: "http://localhost:3000/auth/google/home"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({googleId: profile.id, username: profile._json.email}, function (err, user) {
@@ -222,7 +222,7 @@ app.post("/login", function(req, res) {
 
     req.login(user, function(err) {
         if(err) {
-            console.log(err);
+            res.render('failure');
         } else {
             passport.authenticate("local")(req, res, function() {
                 res.redirect('/');
